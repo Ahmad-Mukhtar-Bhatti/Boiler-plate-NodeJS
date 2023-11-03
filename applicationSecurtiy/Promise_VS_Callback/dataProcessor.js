@@ -138,6 +138,6 @@ function processDataPromise() {
 ////////////////  EXPORT THE VERSION YOU WANT TO CHECK  ////////////////
 
 module.exports = {
-  processData: processDataCallback,   // Change this to processDataPromise to use the promise version 
-  type: 'callback',                   // Change this to 'promise' to use the promise version
+  processData: processDataPromise,   // Change this to processDataPromise to use the promise version 
+  type: 'promise',                   // Change this to 'promise' to use the promise version
 };

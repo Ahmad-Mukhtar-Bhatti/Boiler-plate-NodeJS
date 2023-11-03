@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = function (app) {
 
     // Express Mongo Sanitize middleware
-    app.use(mongoSanitize());
+    app.use(mongoSanitize());           // ********
 
 
     app.post('/validate-username', [
@@ -29,7 +29,7 @@ module.exports = function (app) {
     app.post('/validate-email', (req, res) => {
         const email = req.body.email;
     
-        if (!validator.isEmail(email)) {        // ***************888
+        if (!validator.isEmail(email)) {        // ***************
         return res.status(400).json({ error: 'Invalid email address' });
         }
     
@@ -40,7 +40,7 @@ module.exports = function (app) {
     
     ///////////////////////////////////////////////////////////////
     app.get('/input-validate', (req, res) => {
-        const filePath = path.join(__dirname, '../public/validateForm.html');
+        const filePath = path.join(__dirname, '../public/validate-form.html');
         res.sendFile(filePath);
     });
     ///////////////////////////////////////////////////////////////

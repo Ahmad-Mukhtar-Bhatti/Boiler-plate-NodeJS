@@ -1,10 +1,10 @@
-const escapeHtml = require('escape-html');
+    const escapeHtml = require('escape-html');
 
 
 ////////////////////////////////////////////////////
 // Middleware to escape HTML entities in response data
 module.exports = function (app) {
-    app.use((req, res, next) => {
+    app.use((req, res, next) => {                           // This middleware is the actually imortant piece of code
         res.locals.escapeHtml = escapeHtml;
         next();
     });

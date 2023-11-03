@@ -1,6 +1,6 @@
 const http = require("http");
 const express = require("express");
-const { handleUncaughtExceptions, MyEventEmitter } = require('./error&exceptionHandling/errorHandling');
+const { handleUncaughtExceptions, MyEventEmitter } = require('./error&ExceptionHandling/errorHandling');
 
 const session = require('express-session');
 
@@ -79,7 +79,7 @@ app.get('/', (req, res) => {
 const server = http.createServer(app);
 
 app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+  logger.info(`Server started on http://localhost:${port}`);
 });
 module.exports = { app, server };
 ///////////////////////////////////////////////////////////////
